@@ -1,9 +1,12 @@
 import express from "express"
-import { exercicio1, exercicio2 } from "./services/exercicio.js"
-const app = express()
+import router from "./routes/exercicios"
 
-http://localhost:3000/exercicio1?num1=90&num2=210
-app.get('/exercicio1/' , exercicio1)
+const app = express()
+app.use(express.json())
+
+app.use('/api/v1', router)
+
+
 
 app.get('/exercicio2/:valorH/:qtdeH' , exercicio2)
 
